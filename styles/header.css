@@ -1,0 +1,158 @@
+.header__menu-hamburg {
+    width: 24px;
+    height: 24px;
+    background-image: url("../imagens/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.container__button:checked ~ .container__label > .header__menu-hamburg {
+    background-image: url("../imagens/menu_black_24dp\ 1.png");
+    }
+
+.container__button:checked ~ .container__label{
+    background: var(--azul-gradiente);
+}    
+.header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__text{
+    display: none;
+}
+
+.container__image {
+    padding: 1em;
+}
+
+.list-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__button:checked~.list-menu {
+    display: block;
+}
+
+.list-menu__title,
+.list-menu__item {
+    padding: 1em;
+    background-color: var(--white);
+    font-family: var(--fonte-principal);
+}
+
+.list-menu__title {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.list-menu__link {
+    color: var(--azul-gradiente);
+    text-decoration: none;
+}
+
+.container__button {
+    display: none;
+}
+
+.container__title{
+    display: none;
+}
+
+.options{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .container__title, .container__title--strong{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    
+    }
+    .container__title{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__title--strong{
+        font-weight: 700;
+    }
+    .options{
+        display: flex;
+    }
+
+    .options__item{
+        padding: 10px 1em;
+        text-transform: uppercase; 
+        font-family: var(--fonte-secundaria);       
+    }
+
+    .options__link{
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .container__image__like{
+        display: none;
+    }
+
+    .header__menu-hamburg{
+        display: none;
+    }
+
+    .options__button:checked~ .list-menu{
+        display: block;
+        width: auto;
+    }
+
+    .options__button{
+        display: none;
+    }
+
+    .options__button:checked ~ .label__options > .options__item {
+        background: var(--azul-gradiente);
+        color: var(--white);
+    }
+
+    .list-menu__item:hover{
+        background: var(--azul-gradiente);
+        color: var(--white);
+    }
+
+}
+
+@media screen and (min-width:1728px) {
+    .container__text{
+        display: block;
+    }
+    
+    .container__link{
+        font-family: var(--fonte-principal);
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: var(--black);
+        text-decoration: none;
+    }
+
+    .header{
+        padding: 0 2em;
+    }
+
+    .options{
+        margin-right: auto;
+    }
+}
